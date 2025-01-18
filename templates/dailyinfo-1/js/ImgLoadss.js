@@ -1,0 +1,4 @@
+$(function(){(function($){$.fn.liImageLoad=function(){return this.each(function(){var imgEl=$(this),imgElHeight=imgEl.attr('height'),imgElSrc=imgEl.data('src'),imgElPosTop=imgEl.offset().top,imgElPosBot=(imgElPosTop+imgEl.outerHeight()),wH=$(window).height(),wT=$(window).scrollTop(),wB=(wT+wH),f1=false,data='/lodd.svg'
+imgEl.attr('src',data)
+function imgElPos(){if(f1==false){if(imgElPosBot>wT&&imgElPosTop<wB){f1=true;imgEl.attr('src',imgElSrc).load(function(){imgEl.css({opacity:'0'}).animate({opacity:'1'});});}}}
+imgElPos();$(window).on('scroll',function(){wH=$(window).height();wT=$(window).scrollTop();wB=(wT+wH);imgElPos()})});};})(jQuery);$('img[data-src]').liImageLoad();});
