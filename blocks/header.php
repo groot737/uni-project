@@ -7,9 +7,9 @@ echo('<div class="header-1">
             <div class="div-men-2">
                 <ul>
                     <li>
-                    <li><a href="contact.php">კონტაქტი</a>
+                    <li><a href="http://localhost:8888/dailyinfo.ge/contact.php">კონტაქტი</a>
                     <li>
-                    <li><a href="about.php">ჩვენ შესახებ</a>
+                    <li><a href="http://localhost:8888/dailyinfo.ge/about.php">ჩვენ შესახებ</a>
                     <li>
                 </ul>
             </div>
@@ -23,7 +23,7 @@ echo('<div class="header-1">
 <div class="scroll"></div>
 <div class="center-1">
     <div class="header-13">
-        <a href="index.html" title="">
+        <a href="index.php" title="">
             <div class="logo-1">
                 <div class="logo-2">
                     <img src="templates/dailyinfo-1/images/logo.svg" alt="სანდო, ობიექტური და დროული ინფორმაცია"
