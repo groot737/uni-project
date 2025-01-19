@@ -1,5 +1,4 @@
-<?php
-echo('<div class="header-1">
+<div class="header-1">
 <div class="center-1">
     <div class="header-2">
 
@@ -35,11 +34,34 @@ echo('<div class="header-1">
             <ul>
                 <li class="menu-li-n-a menu-li-n-0"><a href="index.php"><i class="fas fa-home-lg-alt"></i></a>
                 </li>
-
-                <li><a href="category/news/index.php">ახალი ამბები</a></li>
+                <?php
+                $categories = getCategories();
+                $count = 0; 
+                
+                foreach ($categories as $category) {
+                    if ($count >= 6) {
+                        break;
+                    }
+                    echo '<li><a href="http://localhost:8888/dailyinfo.ge/pages/news/index.php?id='. $category["id"].'">' . $category['name'] . '</a></li>' . PHP_EOL;
+                    $count++; 
+                }
+                ?>
                 <li><a href="category.html">სხვა <i class="far fa-angle-down"></i></a>
                     <ul>
-                        <li><a href="category/konphliqtebi/index.html">კონფლიქტები</a></li>
+                        <?php
+                        $categories = getCategories();
+                        $count = 0;
+                        
+                        foreach ($categories as $category) {
+                            $count++; 
+                        
+                            if ($count <= 6) { 
+                                continue;
+                            }
+                            echo '<li><a href="http://localhost:8888/dailyinfo.ge/pages/news/index.php?id='. $category["id"].'">' . $category['name'] . '</a></li>' . PHP_EOL;
+                        }
+                        
+                        ?>
                     </ul>
                 </li>
 
@@ -55,17 +77,10 @@ echo('<div class="header-1">
         </script>
         <div class="search-1">
             <form id="q_search" class="rightside" method="post">
-                <div class="q_search">
-                    <input id="story" name="story" placeholder="საძიებო სიტყვა..." onkeypress="changeVal0(this)"
-                        autocomplete="off" />
-                    <button class="btn-1 q_search_btn" type="submit" title="ძიების დაწყება"><i
-                            class="far fa-search"></i></button>
-                </div>
                 <input type="hidden" name="do" value="search" />
                 <input type="hidden" name="subaction" value="search" />
             </form>
         </div>
     </div>
 </div>
-</div>');
-?>
+</div>
