@@ -1,21 +1,14 @@
+<?php
+ include "db_connect.php";
+ include "database-functions/ads.php";
+?>
+
 <!DOCTYPE html>
 <html lang="ka">
   <meta http-equiv="content-type" content="text/html;charset=utf-8" />
-  <!-- /Added by HTTrack -->
   <head>
     <meta charset="utf-8">
     <title>ჩვენ შესახებ &raquo; სანდო, ობიექტური და დროული ინფორმაცია</title>
-    <meta name="description" content="საინფორმაციო სააგენტო „დეილიინფო“ მკითხველს მიუკერძოებელ, ობიექტურ, ოპერატიულ, ზუსტ და დაბალანსებულ ინფორმაციას სთავაზობს. სააგენტო აერთიანებს ახალი ამბების 5 პორტალს, რომელთა საშუალებითაც საზოგადოებას უყვება როგორც საქართველოში, ასევე მსოფლიოს სხვადასხვა წერტილში მიმდინარე პროცესების შესახებ.">
-    <meta name="keywords" content="სააგენტო, ამბების, საინფორმაციო, „დეილიინფო“, მიუკერძოებლად, ეთიკურად, გაშუქების, ემყარება, პრინციპებს, „დეილი, ჩვენს, ყოველგვარი, სტანდარტების, დაცვით, შეეხება, სარედაქციო, ჯგუფის“, პოლიტიკას, დაარსდა, ნახევარ">
-    <meta name="generator" content="DataLife Engine (http://dle-news.ru)">
-    <meta property="og:site_name" content="სანდო, ობიექტური და დროული ინფორმაცია">
-    <meta property="og:type" content="article">
-    <meta property="og:title" content="ჩვენ შესახებ">
-    <meta property="og:url" content="about.html">
-    <meta property="og:description" content="საინფორმაციო სააგენტო „დეილიინფო“ მკითხველს მიუკერძოებელ, ობიექტურ, ოპერატიულ, ზუსტ და დაბალანსებულ ინფორმაციას სთავაზობს. სააგენტო აერთიანებს ახალი ამბების 5 პორტალს, რომელთა საშუალებითაც საზოგადოებას უყვება როგორც საქართველოში, ასევე მსოფლიოს სხვადასხვა წერტილში მიმდინარე პროცესების შესახებ.">
-    <link rel="search" type="application/opensearchdescription+xml" href="indexeb9d.php?do=opensearch" title="სანდო, ობიექტური და დროული ინფორმაცია">
-    <link rel="canonical" href="about.html">
-    <link rel="alternate" type="application/rss+xml" title="სანდო, ობიექტური და დროული ინფორმაცია" href="rss.xml">
     <link href="engine/classes/min/index6d03.css?f=engine/editor/css/default.css&amp;v=8e9df" rel="stylesheet" type="text/css">
     <script src="engine/classes/min/indexda98.js?g=general&amp;v=8e9df"></script>
     <script src="engine/classes/min/index797f.js?f=engine/classes/js/jqueryui.js,engine/classes/js/dle_js.js,engine/classes/masha/masha.js&amp;v=8e9df" defer></script>
@@ -28,12 +21,7 @@
     <meta name="robots" content="index, follow">
     <meta name="theme-color" content="#970014" />
   </head>
-  <body id="virtuss-1" class="
-
-
-no-sidebar-1
-     
-">
+  <body id="virtuss-1" class="no-sidebar-1">
     <script type="text/javascript" src="templates/dailyinfo-1/js/fav.js"></script>
     <?php require("./blocks/header.php")?>
     <script type="text/javascript" src="templates/dailyinfo-1/js/sls-1.js"></script>
@@ -41,9 +29,6 @@ no-sidebar-1
       <!-- center -->
       <div class="h-baneri-1">
         <div class="h-baneri-2">
-          <!--
-<img src="/templates/dailyinfo-1/img/b-baner-4.png" title="რეკლამა" alt="რეკლამა" />
--->
         </div>
       </div>
       <div class="di-full-0-s-0">
@@ -73,7 +58,10 @@ no-sidebar-1
                   <article class="box story">
                     <div class="box_in">
                       <h1 class="title">ჩვენ შესახებ</h1>
-                      <div class="text">ტექსტი ტექსტი</div>
+                      <div class="text"><?php
+                      include "db_connect.php";
+                      include "database-functions/description.php";
+                      ?></div>
                     </div>
                   </article>
                 </div>
@@ -86,7 +74,6 @@ no-sidebar-1
           <div class="tu-right-news-2">
             <div class="baneris-5">
               <div class="baneris-6">
-                <!-- <img src="/templates/dailyinfo-1/img/b-baner-6.png" title="რეკლამა" alt="რეკლამა" /> -->
                 <div data-type="_mgwidget" data-widget-id="1714947"></div>
                 <script>
                   (function(w, q) {
@@ -105,124 +92,14 @@ no-sidebar-1
                 </div>
               </div>
             </div>
-            <!--/ 2 -->
-            <div class="axali-topi-1">
-              <li>
-                <div class="tu-right-news-6">
-                  <a href="category/news/9068--.html">
-                    <div class="tu-right-news-7">
-                      <div class="tu-right-news-8">
-                        <div class="tu-right-news-9">
-                          <div class="tu-right-news-10">
-                            <i class="fas fa-long-arrow-alt-right"></i>
-                          </div>
-                        </div>
-                        <img src="uploads/posts/2025-01/1736775425_fb_img_1736774809860.jpg" title="არსებული ინფორმაციით, „ოცნების“ დეპუტატებსა და მათ მეგობარს დუბაიში პატიმრობა ემუქრებათ" alt="არსებული ინფორმაციით, „ოცნების“ დეპუტატებსა და მათ მეგობარს დუბაიში პატიმრობა ემუქრებათ" />
-                      </div>
-                      <div class="tu-right-news-11"> არსებული ინფორმაციით, „ოცნების“ დეპუტატებსა და მათ მეგობარს დუბაიში პატიმრობა ემუქრებათ </div>
-                    </div>
-                  </a>
-                </div>
-              </li>
-              <li>
-                <div class="tu-right-news-6">
-                  <a href="category/news/9066--.html">
-                    <div class="tu-right-news-7">
-                      <div class="tu-right-news-8">
-                        <div class="tu-right-news-9">
-                          <div class="tu-right-news-10">
-                            <i class="fas fa-long-arrow-alt-right"></i>
-                          </div>
-                        </div>
-                        <img src="uploads/posts/2025-01/1736748435_kakha_0.jpg" title="უკრაინაში კიდევ ერთი ქართველი მებრძოლი დაიღუპა" alt="უკრაინაში კიდევ ერთი ქართველი მებრძოლი დაიღუპა" />
-                      </div>
-                      <div class="tu-right-news-11"> უკრაინაში კიდევ ერთი ქართველი მებრძოლი დაიღუპა </div>
-                    </div>
-                  </a>
-                </div>
-              </li>
-              <li>
-                <div class="tu-right-news-6">
-                  <a href="category/news/9067--dailyinfoge-.html">
-                    <div class="tu-right-news-7">
-                      <div class="tu-right-news-8">
-                        <div class="tu-right-news-9">
-                          <div class="tu-right-news-10">
-                            <i class="fas fa-long-arrow-alt-right"></i>
-                          </div>
-                        </div>
-                        <img src="uploads/posts/2025-01/1736749887_273281186_405407394702850_5843350390904834024_n.png" title="საინფორმაციო სააგენტო DailyInfo.Ge-ის განცხადება" alt="საინფორმაციო სააგენტო DailyInfo.Ge-ის განცხადება" />
-                      </div>
-                      <div class="tu-right-news-11"> საინფორმაციო სააგენტო DailyInfo.Ge-ის განცხადება </div>
-                    </div>
-                  </a>
-                </div>
-              </li>
-              <li>
-                <div class="tu-right-news-6">
-                  <a href="category/news/9079--.html">
-                    <div class="tu-right-news-7">
-                      <div class="tu-right-news-8">
-                        <div class="tu-right-news-9">
-                          <div class="tu-right-news-10">
-                            <i class="fas fa-long-arrow-alt-right"></i>
-                          </div>
-                        </div>
-                        <img src="uploads/posts/2025-01/1736899833_472989781_623479633359397_5655464430362540347_n.jpg" title="გიორგი გახარიას ჯანმრთელობის მდგომარეობა მძიმეა | განცხადება" alt="გიორგი გახარიას ჯანმრთელობის მდგომარეობა მძიმეა | განცხადება" />
-                      </div>
-                      <div class="tu-right-news-11"> გიორგი გახარიას ჯანმრთელობის მდგომარეობა მძიმეა | განცხადება </div>
-                    </div>
-                  </a>
-                </div>
-              </li>
-              <li>
-                <div class="tu-right-news-6">
-                  <a href="category/news/9073--.html">
-                    <div class="tu-right-news-7">
-                      <div class="tu-right-news-8">
-                        <div class="tu-right-news-9">
-                          <div class="tu-right-news-10">
-                            <i class="fas fa-long-arrow-alt-right"></i>
-                          </div>
-                        </div>
-                        <img src="uploads/posts/2025-01/1736884073_istock_000008480786medium_jpeg.jpg" title="რა ფასად შეიძენთ დოლარსა და ევროს | ლარი ყველა  ვალუტასთან გაუფასურდა" alt="რა ფასად შეიძენთ დოლარსა და ევროს | ლარი ყველა  ვალუტასთან გაუფასურდა" />
-                      </div>
-                      <div class="tu-right-news-11"> რა ფასად შეიძენთ დოლარსა და ევროს | ლარი ყველა ვალუტასთან გაუფასურდა </div>
-                    </div>
-                  </a>
-                </div>
-              </li>
-              <li>
-                <div class="tu-right-news-6">
-                  <a href="category/news/9075--.html">
-                    <div class="tu-right-news-7">
-                      <div class="tu-right-news-8">
-                        <div class="tu-right-news-9">
-                          <div class="tu-right-news-10">
-                            <i class="fas fa-long-arrow-alt-right"></i>
-                          </div>
-                        </div>
-                        <img src="uploads/posts/2025-01/1736897520_aa-2025-01-15t030812_402.jpg" title="სამხარაძე და სხვა ე.წ. დეპუტატები გახარიას ფიზიკურად გაუსწორდნენ | ის კლინიკაში იმყოფება" alt="სამხარაძე და სხვა ე.წ. დეპუტატები გახარიას ფიზიკურად გაუსწორდნენ | ის კლინიკაში იმყოფება" />
-                      </div>
-                      <div class="tu-right-news-11"> სამხარაძე და სხვა ე.წ. დეპუტატები გახარიას ფიზიკურად გაუსწორდნენ | ის კლინიკაში იმყოფება </div>
-                    </div>
-                  </a>
-                </div>
-              </li>
-            </div>
-            <div class="baneris-05 baneris-5">
-              <div class="baneris-6">
-                <a href="https://www.facebook.com/profile.php?id=61564432915948" target="_blank">
-                  <img src="uploads/avia-1.png" title="რეკლამა" alt="რეკლამა" />
-                </a>
-              </div>
-            </div>
           </div>
         </div>
         <!-- /SIDEBAR-->
       </div>
       <div class="h-baneri-03 h-baneri-3">
-        <img src="templates/dailyinfo-1/img/b-baner-5.png" title="რეკლამა" alt="რეკლამა" />
+      <?php 
+          get_R5_ad($conn, true);
+        ?>
       </div>
     </div>
     <!--/ center -->

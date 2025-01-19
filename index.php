@@ -1,3 +1,8 @@
+<?php
+ include "db_connect.php";
+ include "database-functions/ads.php";
+?>
+
 <!DOCTYPE html>
 <html lang="ka">
   <meta http-equiv="content-type" content="text/html;charset=utf-8" />
@@ -408,10 +413,14 @@
       </div>
       <div class="baneris-1">
         <div class="baneris-2">
-          <img src="templates/dailyinfo-1/img/b-baner-1.png" title="რეკლამა" alt="რეკლამა" />
+        <?php 
+          get_R1_ad($conn, true);
+        ?>
         </div>
         <div class="baneris-3 baneris-2">
-          <img src="templates/dailyinfo-1/img/b-baner-2.png" title="რეკლამა" alt="რეკლამა" />
+        <?php 
+          get_R2_ad($conn, true);
+        ?>
         </div>
       </div>
       <!-- 2 -->
@@ -542,9 +551,6 @@
       <!--/ 4 -->
       <div class="hh-baneri-1">
         <div class="hh-baneri-2">
-          <!--
-<img src="/templates/dailyinfo-1/img/b-baner-4.png" title="რეკლამა" alt="რეკლამა" />
--->
         </div>
       </div>
     </div>
@@ -742,7 +748,9 @@
         </div>
       </div>
       <div class="h-baneri-3">
-        <img src="templates/dailyinfo-1/img/b-baner-5.png" title="რეკლამა" alt="რეკლამა" />
+      <?php 
+          get_R5_ad($conn, true);
+      ?>
       </div>
     </div> <?php require_once('./blocks/footer.php')?> <script type="text/javascript" src="templates/dailyinfo-1/js/slick.js"></script>
   </body>

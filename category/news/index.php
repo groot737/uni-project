@@ -1,3 +1,8 @@
+<?php
+ include "../../db_connect.php";
+ include "../../database-functions/ads.php";
+?>
+
 <!DOCTYPE html>
 <html lang="ka">
 
@@ -32,9 +37,6 @@
         <!-- center -->
         <div class="h-baneri-1">
             <div class="h-baneri-2">
-                <!--
-<img src="/templates/dailyinfo-1/img/b-baner-4.png" title="რეკლამა" alt="რეკლამა" />
--->
             </div>
         </div>
         <div class="di-full-0-s-0">
@@ -131,19 +133,12 @@
                           </div>
                         </li>
                       </div>
-                    <div class="baneris-05 baneris-5">
-                        <div class="baneris-6">
-                            <a href="https://www.facebook.com/profile.php?id=61564432915948" target="_blank">
-                                <img src="../../uploads/avia-1.png" title="რეკლამა" alt="რეკლამა" />
-                            </a>
-                        </div>
-                    </div>
                 </div>
             </div>
             <!-- /SIDEBAR-->
         </div>
         <div class="h-baneri-03 h-baneri-3">
-            <img src="../../templates/dailyinfo-1/img/b-baner-5.png" title="რეკლამა" alt="რეკლამა" />
+            <?php get_R5_ad($conn, false); ?>
         </div>
     </div>
     <!--/ center -->

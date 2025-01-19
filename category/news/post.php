@@ -1,3 +1,8 @@
+<?php
+ include "../../db_connect.php";
+ include "../../database-functions/ads.php";
+?>
+
 <!DOCTYPE html>
 <html lang="ka">
 <meta http-equiv="content-type" content="text/html;charset=utf-8" />
@@ -56,9 +61,6 @@
             <!-- center -->
             <div class="h-baneri-1">
                 <div class="h-baneri-2">
-                    <!--
-<img src="/templates/dailyinfo-1/img/b-baner-4.png" title="რეკლამა" alt="რეკლამა" />
--->
                     <style>
                         div[data-widget-id="1714943"] {
                             min-height: 300px;
@@ -225,23 +227,23 @@
                                 </div>
                             </li>
                         </div>
-                        <div class="baneris-05 baneris-5">
-                            <div class="baneris-6">
-                                <a href="" target="_blank">
-                                    <img src="" title="რეკლამა" alt="რეკლამა" />
-                                </a>
-                            </div>
-                        </div>
+
+
+
+
+
+
+
                     </div>
                 </div>
                 <!-- /SIDEBAR-->
             </div>
             <div class="full-d-1 baneris-1">
                 <div class="baneris-2">
-                    <img src="../../templates/dailyinfo-1/img/b-baner-1.png" title="რეკლამა" alt="რეკლამა" />
+                    <?php get_R1_ad($conn, false); ?>
                 </div>
                 <div class="baneris-3 baneris-2">
-                    <img src="../../templates/dailyinfo-1/img/b-baner-2.png" title="რეკლამა" alt="რეკლამა" />
+                    <?php get_R2_ad($conn, false); ?>
                 </div>
             </div>
             <div class="full-d-2">
@@ -578,7 +580,7 @@
                 <!--/ 7 -->
             </div>
             <div class="h-baneri-03 h-baneri-3">
-                <img src="../../templates/dailyinfo-1/img/b-baner-5.png" title="რეკლამა" alt="რეკლამა" />
+            <?php get_R5_ad($conn, false); ?>
             </div>
         </div>
         <!--/ center -->

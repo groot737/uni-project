@@ -1,3 +1,8 @@
+<?php
+ include "db_connect.php";
+ include "database-functions/ads.php";
+?>
+
 <!DOCTYPE html>
 <html lang="ka">
   <meta http-equiv="content-type" content="text/html;charset=utf-8" />
@@ -12,6 +17,7 @@
     <link href="templates/dailyinfo-1/css/engine-1.css" type="text/css" rel="stylesheet">
     <link href="templates/dailyinfo-1/css/style-8.css" type="text/css" rel="stylesheet">
     <link href="pro/css/all.css" type="text/css" rel="stylesheet">
+    <link rel="stylesheet" href="./templates/dailyinfo-1/css/contact.css">
     <script src="../jsc.adskeeper.co.uk/site/973502.js" async></script>
     <meta name="robots" content="index, follow">
     <meta name="theme-color" content="#970014" />
@@ -55,8 +61,30 @@
                   <article class="box story">
                     <div class="box_in">
                       <h1 class="title">კონტაქტი</h1>
-                      <div class="text">
-                      here goes text
+                      <div class="contact">
+                      <form action="./database-functions/send-message.php" method="post">
+            <div class="form-group">
+                <label for="subject">სათაური</label>
+                <input type="text" id="subject" name="subject" placeholder="მიუთითე სათაური" required>
+            </div>
+
+            <div class="form-group">
+                <label for="email">ემაილი</label>
+                <input type="email" id="email" name="email" placeholder="მიუთითე ემაილი" required>
+            </div>
+
+            <div class="form-group">
+                <label for="phone">ტელეფონის ნომერი</label>
+                <input type="tel" id="phone" name="phone" placeholder="მიუთითე ტელეფონის ნომერი" required>
+            </div>
+
+            <div class="form-group">
+                <label for="message">მესიჯი</label>
+                <textarea id="message" name="message" placeholder="მიუთითე მესიჯი" required></textarea>
+            </div>
+
+            <button type="submit" class="submit-btn">გაგზავნა</button>
+        </form>
                       </div>
                     </div>
                   </article>
@@ -206,11 +234,22 @@
         <!-- /SIDEBAR-->
       </div>
       <div class="h-baneri-03 h-baneri-3">
-        <img src="templates/dailyinfo-1/img/b-baner-5.png" title="რეკლამა" alt="რეკლამა" />
+      <?php 
+          get_R5_ad($conn, true);
+        ?>
       </div>
     </div>
     <!--/ center -->
     <?php require_once('./blocks/footer.php') ?>;
     <script type="text/javascript" src="templates/dailyinfo-1/js/slick.js"></script>
+    <!-- შევატყობინოთ users გაიგზავნა თუ არა მესიჯი -->
+    <script>
+    const queryString = window.location.search;
+    const urlParams = new URLSearchParams(queryString);
+
+    if(urlParams.get('sent') == 1){
+      alert("მესიჯი გაიგზავნა!!")
+    }
+    </script>
   </body>
 </html>
